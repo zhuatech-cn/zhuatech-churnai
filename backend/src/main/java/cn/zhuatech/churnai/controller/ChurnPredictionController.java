@@ -1,0 +1,4 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+package cn.zhuatech.churnai.controller;
+import cn.zhuatech.churnai.common.ApiResponse; import cn.zhuatech.churnai.service.ChurnPredictionService; import jakarta.validation.Valid; import org.springframework.security.access.prepost.PreAuthorize; import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/ai/churn") @PreAuthorize("hasAnyRole('DOMAIN_USER','DOMAIN_OPERATOR','ADMIN')") public class ChurnPredictionController {private final ChurnPredictionService service;public ChurnPredictionController(ChurnPredictionService service){this.service=service;}@PostMapping("/predict") public ApiResponse<ChurnPredictionService.Result> predict(@Valid @RequestBody ChurnPredictionService.Request request){return ApiResponse.ok("客户流失风险预测完成",service.predict(request));}}
