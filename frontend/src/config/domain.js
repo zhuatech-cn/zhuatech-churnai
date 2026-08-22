@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'CHURNAI',systemName:'知华客户流失预警 AI 平台',englishName:'CUSTOMER CHURN AI',theme:{primary:'#3d5a80',dark:'#24344d',accent:'#e88b4a'},
  workspace:'客户成功中心 / 智能经营组',fieldWorkspace:'华东大区 / 客户成功一组',period:'2026-08-15 · 每日评分',liveText:'客户信号于 10:28 更新',fieldContextLabel:'当前组合',fieldContext:'重点续约客户',fieldUser:'顾遥',fieldRole:'客户成功经理',adminUser:'沈砚',adminRole:'客户运营负责人',

@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.churnai;
 import cn.zhuatech.churnai.service.ChurnPredictionService; import org.junit.jupiter.api.Test; import static org.assertj.core.api.Assertions.assertThat;
 class ChurnPredictionServiceTests {private final ChurnPredictionService service=new ChurnPredictionService();
