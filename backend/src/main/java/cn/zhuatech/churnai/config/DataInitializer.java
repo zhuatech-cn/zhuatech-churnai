@@ -1,7 +1,13 @@
 /* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.churnai.config;
 import cn.zhuatech.churnai.model.*; import cn.zhuatech.churnai.repository.*; import org.springframework.boot.CommandLineRunner; import org.springframework.context.annotation.*; import org.springframework.security.crypto.password.PasswordEncoder; import java.time.LocalDate; import java.util.List;
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Configuration public class DataInitializer {
+ /**
+  * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+  */
  @Bean CommandLineRunner seed(OperatingUnitRepository units,WorkRecordRepository orders,ResourceRegisterRepository resources,ReviewRecordRepository reviews,UserRepository users,PasswordEncoder encoder){return args->{if(units.count()>0)return;
  var u1=units.save(new OperatingUnit("CUSTOMER-SUCCESS","客户成功中心","营销中心",180));var u2=units.save(new OperatingUnit("MEMBER-OPS","会员运营组","运营中心",120));var u3=units.save(new OperatingUnit("SERVICE-QA","服务体验组","客服中心",96));
  var t1=orders.save(new WorkRecord("CR-260815-018","CUS-028176","华东制造客户流失预警",u1,24,16,1,LocalDate.now().plusDays(1),WorkRecord.Status.RUNNING,"CRM+服务记录"));
